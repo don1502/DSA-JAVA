@@ -3,6 +3,7 @@ package Binarysearch;
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 // Leetcode problem 34. Find First and Last Position of Element in Sorted Array
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LastPositionOfElement {
@@ -19,7 +20,7 @@ public class LastPositionOfElement {
             }
             System.out.println("Enter the element to be searched: ");
             int target = input.nextInt();
-            System.out.println("The range of targeted element is " + searchRange(arr, target));
+            System.out.println("The range of targeted element is " + Arrays.toString(searchRange(arr, target)));
     }
 
     // Main leetcode function....
