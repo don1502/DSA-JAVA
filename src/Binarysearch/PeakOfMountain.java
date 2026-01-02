@@ -2,6 +2,9 @@ package Binarysearch;
 
 // https://leetcode.com/problems/peak-index-in-a-mountain-array
 // Leetcode problem 852. Peak Index in a Mountain Array
+// The same answer is used for another leetcode problem
+// https://leetcode.com/problems/find-peak-element
+// Leetcode problem 162. Find Peak Element
 
 import java.util.Scanner;
 
