@@ -47,7 +47,7 @@ public class FindElementInInfinteArray {
     static int FindElement(int [] arr, int target, int low, int high){
         int mid = 0;
         while(low <= high){
-            mid = high - low / 2;
+            mid = low + (high - low) / 2;
             if (arr[mid] == target){
                 return mid;
             }

@@ -28,7 +28,7 @@ public class FloorOfNumber {
         int high = arr.length - 1; // length-1, because to avoid ArrayIndexOutOfBoundry error.
         int mid = 0;
         while(low <= high){ // <= is used because, then only it will find the element if the target is in 1st index.
-            mid = high - low / 2;
+            mid = low + (high - low) / 2;
             if (arr[mid] == target){
                 return mid;
             }

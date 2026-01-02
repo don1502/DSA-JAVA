@@ -46,7 +46,7 @@ public class LastPositionOfElement {
         int high = arr.length - 1;
         int mid = 0;
         while (low <= high) {
-            mid = high - low / 2;
+            mid = low + (high - low) / 2;
             if (arr[mid] == target) {
                 ans = mid;
                 if (isFirstElement) {

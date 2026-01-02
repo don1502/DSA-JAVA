@@ -29,7 +29,7 @@ public class SmallestLetterGreaterTarget {
         int high = arr.length - 1;
         int mid = 0;
         while(low <= high){
-            mid = high - low / 2;
+            mid = low + (high - low) / 2;
 
             // As we will return only smallest greater value than mid we dont want to check target == mid
 

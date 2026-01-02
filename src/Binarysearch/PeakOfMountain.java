@@ -1,5 +1,8 @@
 package Binarysearch;
 
+// https://leetcode.com/problems/peak-index-in-a-mountain-array
+// Leetcode problem 852. Peak Index in a Mountain Array
+
 import java.util.Scanner;
 
 public class PeakOfMountain {
@@ -14,6 +17,8 @@ public class PeakOfMountain {
         int result = peakElement(arr);
         System.out.println("Peak element in array is "+result);
     }
+
+    // Leetcode main function
 
     static int peakElement(int [] arr){
         int low = 0;
