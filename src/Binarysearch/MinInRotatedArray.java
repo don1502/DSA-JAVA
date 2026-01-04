@@ -3,6 +3,11 @@ package Binarysearch;
 // https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
 // Leetcode problem 153. Find Minimum in Rotated Sorted Array
 
+// Same but leetcode hard -- with duplicates
+// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
+// Leetcode problem 154. Find Minimum in Rotated Sorted Array II
+// In this problem only the pivot function will be changes --> See that in searchRotArrWithDup.java....
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
