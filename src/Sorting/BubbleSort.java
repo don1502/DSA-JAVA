@@ -23,7 +23,7 @@ public class BubbleSort {
 
     static void bubblesort(int[] arr){
         // run step n-1 times
-        boolean swapped;
+        boolean swapped = false;
 
         for (int i = 0; i < arr.length; i++) {
             // for each step max item will come at the last index...
