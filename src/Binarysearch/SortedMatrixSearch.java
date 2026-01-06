@@ -22,7 +22,7 @@ public class SortedMatrixSearch {
 
     static int[] search(int [][] arr, int target){
         int row = 0;
-        int column = arr.length-1;
+        int column = arr[0].length-1; // Safer version...
 
         while( row < arr.length && column >= 0){
             if(arr[row][column] == target){
