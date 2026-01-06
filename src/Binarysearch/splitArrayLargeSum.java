@@ -14,9 +14,9 @@ public class splitArrayLargeSum {
         for (int i = 0; i < n; i++) {
             arr[i] = input.nextInt();
         }
-        System.out.println("Enter the max number of sub array formed : ");
+        System.out.println("Enter the targeted element : ");
         int target = input.nextInt();
-        System.out.println("Maximum value of sub array is "+ splitArray(arr,target);
+        System.out.println("Maximum value of sub array is "+ splitArray(arr,target));
     }
 
     // Main leetcode function...
