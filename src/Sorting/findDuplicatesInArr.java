@@ -17,6 +17,10 @@ public class findDuplicatesInArr {
 
         System.out.print("The duplicate element is " + findDuplicate(arr));
     }
+
+    // Main leetcode function....
+    // In leetcode it is in binary search.
+
     static int findDuplicate(int[] arr) {
         int i = 0;
         while(i< arr.length){
