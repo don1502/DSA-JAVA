@@ -4,11 +4,20 @@ package Sorting;
 // 41. First Missing Positive
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class firstMissPositive {
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of elements: ");
+        int n = input.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = input.nextInt();
+        }
+        System.out.print("The missing positive element in array is " + firstMissingPositiveNumber(arr));
     }
 
     // Main leetcode function..
