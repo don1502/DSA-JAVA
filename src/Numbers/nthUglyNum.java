@@ -3,9 +3,16 @@ package Numbers;
 // https://leetcode.com/problems/ugly-number-ii
 // leetcode problem 264. Ugly Number II
 
+import java.util.Scanner;
+
 public class nthUglyNum {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int n = input.nextInt();
 
+        int result = nthUglyNumber(n);
+        System.out.print("The nth ugly number is  "+result);
     }
 
     // Main leetcode function .....
