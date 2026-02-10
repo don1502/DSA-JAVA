@@ -1,5 +1,8 @@
 package Strings;
 
+// https://leetcode.com/problems/subsets/
+// Leetcode problam 78. Subsets
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
