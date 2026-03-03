@@ -21,5 +21,6 @@ public class Main {
         list.display();
         list.deleteAnyPosition(3);
         list.display();
+        System.out.println("The target value is at " + list.find(3));
     }
 }

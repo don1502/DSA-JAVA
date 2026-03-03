@@ -84,22 +84,33 @@ public class LinkedList {
     }
 
     public void deleteAnyPosition(int index){
-        if (index == 0 ){ // If the index is 0 then it means inserting at first.
-            deleteFirst(); // So insert 1st
+        if (index == 0 ){ // If the index is 0 then it means deleting at first.
+            deleteFirst(); // So delete 1st
             return;
         }
 
-        Node current = head;
-        Node previous = null;
-        Node after = current;
+        Node current = head; //current node for traversing
+        Node previous = null; // Previous node which will be denoting previous of the current node
+        Node after = current; // After node will be pointing current node at 1st
 
-        for (int i = 0; i < index; i++) {
-            previous.next = current;
-            current = current.next;
-            after = current.next;
+        for (int i = 0; i < index-1; i++) { // Traversing till index-1
+            previous = current; // making previous to current
+            current = current.next; // traversing current node to next node of current
+            after = current.next; // Traversing after node to next node of current (updated current from above)
         }
-        previous.next = after;
-        current.next = null;
+        previous.next = after; // Cutting the link between previous and current and  connnecting to after.
+        current.next = null; // As current node is removed from linked list, point its next to null.
+    }
+
+    public Node find(int value){
+        Node node = head;
+        while (node != null){
+            if(node.value == value){
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
     }
 
     public void display(){  // This function helps us to print/display the elements in the linkedlist
@@ -111,6 +122,8 @@ public class LinkedList {
         }
         System.out.print("NULL\n");
     }
+
+
 
     private class Node{ // Node declaration class and its constructor.
         private int value; // A node has value and next
