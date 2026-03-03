@@ -61,6 +61,21 @@ public class LinkedList {
 
     }
 
+    // INSERTING ELEMENTS USING RECURSION
+
+    public void insertRecursion(int value, int index){
+        head = insertRecursion(value, index, head);
+    }
+    private Node insertRecursion(int value, int index, Node node){
+        if(index == 0){
+            Node temp = new Node(value, node);
+            size++;
+            return temp;
+        }
+        node.next = insertRecursion(value, index-1, node.next);
+        return node;
+    }
+
     public void deleteFirst(){ // Deleting at 1st position
         if (head == null){
             System.out.println("No node to delete");
@@ -133,10 +148,10 @@ public class LinkedList {
             this.value = value;
         }
 
-//        public Node(int value, Node next){
-//            this.value = value;
-//            this.next = next;
-//        }
+        public Node(int value, Node next){
+            this.value = value;
+            this.next = next;
+        }
 
     }
 }

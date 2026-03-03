@@ -22,5 +22,9 @@ public class Main {
         list.deleteAnyPosition(3);
         list.display();
         System.out.println("The target value is at " + list.find(3));
+
+        System.out.println("Inserting using recursion");
+        list.insertRecursion(20, 2);
+        list.display();
     }
 }
