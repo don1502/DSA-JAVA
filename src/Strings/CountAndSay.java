@@ -23,7 +23,10 @@ public class CountAndSay {
             while (j < curr.length()) {
                 char ch = curr.charAt(j);
                 int count = 0;
-                while (j < curr.length() && curr.charAt(j) == ch) { j++; count++; }
+                while (j < curr.length() && curr.charAt(j) == ch) {
+                    j++;
+                    count++;
+                }
                 sb.append(count).append(ch);
             }
             curr = sb.toString();
