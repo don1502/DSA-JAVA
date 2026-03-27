@@ -3,12 +3,15 @@ package BinaryTree.Sum;
 // https://leetcode.com/problems/binary-tree-level-order-traversal/
 // Leetcode problem 102. Binary Tree Level Order Traversal
 
-import javax.swing.tree.TreeNode;
 import java.util.*;
 
 public class LevelOrderTraversal {
     public static void main(String[] args) {
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
 
+        System.out.println(levelOrder(root));
     }
 
     // Main leetcode function...
