@@ -1,0 +1,68 @@
+package BinaryTree.Sum;
+
+//  https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+// Leetcode problem 297. Serialize and Deserialize Binary Tree
+
+import java.util.*;
+
+public class SerializeAndDeserialize {
+    public static void main(String[] args) {
+
+    }
+
+    // Main leetcode function.....
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        if (root == null) return "null";
+
+        StringBuilder sb = new StringBuilder();
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty()) {
+            TreeNode curr = q.poll();
+
+            if (curr == null) {
+                sb.append("null,");
+                continue;
+            }
+
+            sb.append(curr.val).append(",");
+            q.add(curr.left);
+            q.add(curr.right);
+        }
+
+        return sb.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if (data.equals("null")) return null;
+
+        String[] arr = data.split(",");
+        TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        int i = 1;
+
+        while (!q.isEmpty() && i < arr.length) {
+            TreeNode curr = q.poll();
+
+            if (!arr[i].equals("null")) {
+                curr.left = new TreeNode(Integer.parseInt(arr[i]));
+                q.add(curr.left);
+            }
+            i++;
+
+            if (i < arr.length && !arr[i].equals("null")) {
+                curr.right = new TreeNode(Integer.parseInt(arr[i]));
+                q.add(curr.right);
+            }
+            i++;
+        }
+
+        return root;
+    }
+
+}
