@@ -34,7 +34,7 @@ public class PlayersWithTrainer {
             if(players[i] <= trainers[j]) i++;
             j++;
         }
-        return i++;
+        return i;
     }
 
 }

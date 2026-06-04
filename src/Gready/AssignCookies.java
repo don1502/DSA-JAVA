@@ -36,7 +36,7 @@ public class AssignCookies {
             if(g[i] <= s[j]) i++;
             j++;
         }
-        return i++;
+        return i;
     }
 
 }
