@@ -3,6 +3,8 @@ package Gready;
 // https://leetcode.com/problems/assign-cookies/
 // Leetcode problem 455. Assign Cookies
 
+// This is like players and trainers sum
+
 import java.util.*;
 
 public class AssignCookies {
