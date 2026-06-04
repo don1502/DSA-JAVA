@@ -1,0 +1,20 @@
+Ascending (default) ----> Arrays.sort(arr);
+Descending -----> Arrays.sort(arr, Collections.reverseOrder());
+Even number first ----> Arrays.sort(arr, (a, b) -> (a % 2) - (b % 2));
+Absolute value sort -----> Arrays.sort(arr, (a, b) -> Math.abs(a) - Math.abs(b));
+Custom descending -----> Arrays.sort(arr, (a, b) -> b - a);
+Sort by first column ----> Arrays.sort(arr, (a, b) -> a[0] - b[0]);
+Sort by second column ----> Arrays.sort(arr, (a, b) -> a[1] - b[1]);
+Descending sort -----> Arrays.sort(arr, (a, b) -> b[0] + a[0]);
+Sort by sum -----> Arrays.sort(arr, (a, b) ->  (a[0] + a[1]) - (b[0] + b[1]));
+Sort by difference ----> Arrays.sort(arr, (a, b) -> (a[0] - a[1]) - (b[0] - b[1]));
+
+Multi-condition sort ----> Arrays.sort(arr, (a, b) -> {
+    if(a[0] == b[0])
+        return a[1] - b[1];
+    return a[0] - b[0];
+});
+
+Arrays.sort(arr, (a, b) -> Integer.compare(a[0] - a[1], b[0]  - b[1]));
+
+Arrays.sort(arr, Comparator.comparingInt(x -> x[0] - x[1]));
