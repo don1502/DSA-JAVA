@@ -27,8 +27,8 @@ public class RequiredPlatform {
         Arrays.sort(depature);
         int platform = 1;
         int final_platform = 1;
-        int i = 1;
-        int j = 0;
+        int i = 1; // To track arrival time
+        int j = 0; // To track departure time
         while(i < n && j < n){
             if(arrival[i] <= depature[j]){
                 platform++;
