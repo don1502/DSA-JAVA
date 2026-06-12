@@ -9,11 +9,11 @@ public class ThreeSum {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
-        int [] coins = new int[n];
+        int [] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            coins[i] = input.nextInt();
+            arr[i] = input.nextInt();
         }
-        System.out.println(threeSum(coins));
+        System.out.println(threeSum(arr));
     }
 
     // Main leetcode function...
